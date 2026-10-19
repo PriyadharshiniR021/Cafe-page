@@ -11,127 +11,824 @@
 <body>
     <!-- navbar-->
     <header>
-        <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
-                <h2 class="logo-text">☕The Untitled Cafe</h2>
-            </a>
-            <ul class="nav-menu">
-                <button id="menu-close-button" class="fas fa-times"></button>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-            
-            
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
-            
-            
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Menu</a>
-                </li>
-            
-            
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Testimonials</a>
-                </li>
-            
-            
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Gallery</a>
-                </li>
-            
-            
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <button id="menu-open-button" class="fas fa-bars"></button>
+    <nav class="navbar section-content">
 
-        </nav>
-    </header>
+        <a href="#home" class="nav-logo">
+            <h2 class="logo-text">☕ The Untitled Cafe</h2>
+        </a>
+
+        <ul class="nav-menu">
+
+            <button id="menu-close-button" class="fas fa-times"></button>
+
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="menu.html" class="nav-link">Menu</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#gallery" class="nav-link">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+
+        </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
+        <button class="order-button" id="order-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="order-count">0</span>
+        </button>
+
+        <!-- Cart -->
+        <div class="cart-panel" id="cart-panel">
+
+            <div class="cart-header">
+                <h2>Your Order</h2>
+
+                <button id="cart-close" class="cart-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+            <div class="cart-footer">
+
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cart-total">₹0</strong>
+                </div>
+
+                <button class="place-order-button" id="place-order-button">
+                    Place Order
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+</header>
 
     <main>
         <!--header-->
-        <section class="hero-section">
+        <section id="home" class="hero-section">
             <div class="section-content">
                 <div class="hero-details">
+
                     <h2 class="title">Best Cafe</h2>
-                    <h3 class="subtitle">Make your day great with our coffee!..</h3>
-                    <p class="description">Welcome to our coffee paradise, where every bean tells a story 
-                        and every cup sparks joy..</p>
+
+                    <h1 class="subtitle">
+                        Make your day great with our coffee!
+                    </h1>
+
+                    <p class="description">
+                        Welcome to The Untitled Cafe , where every bean tells a story
+                        and every cup brings a little happiness to your day.
+                    </p>
+
                     <div class="buttons">
-                        <a href="#" class="button order-now">Order now</a>
-                        <a href="#" class="button contact-us">Contact us</a>
+
+                        <a href="menu.html" class="button order-now">
+                            Explore Menu
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#contact" class="button contact-us">
+                            Contact Us
+                        </a>
+
                     </div>
+
+                    <!-- Small highlights -->
+                    <div class="hero-features">
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <div>
+                                <strong>Fresh Coffee</strong>
+                                <span>Every single day</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-leaf"></i>
+                            <div>
+                                <strong>Fresh Ingredients</strong>
+                                <span>Quality you can taste</span>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
                 <div class="hero-image-wrapper" >
-                    <img src="./images/coffee-hero-section.png " alt="Hero" class="hero-image">
+                    <img src="./images/coffee-hero-section.png" alt="Hero" class="hero-image">
                 </div>
             </div>
         </section>
 
-        <!--about-->
-        <section class="about-section">
-            <div class="section-content">
+        
+        <!-- about -->
+        <section id="about" class="about-section">
+
+            <div class="section-content about-content reveal">
+
+                <!-- About Image -->
                 <div class="about-image-wrapper">
-                    <img src="images/about-image.jpg" alt="About" 
-                    class="about-image">
-                </div>
-                <div class="about-details">
-                    <h2 class="section-title">About us</h2>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vitae quam voluptas. Quisquam, sint totam dignissimos eius officia sunt minima earum iure qui minus unde et repellat. Reprehenderit, dolorem provident!</p>
-                    <div class="social-link-list">
-                        <a href="#" class="social-link"><i class="fa-brands 
-                        fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands 
-                        fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands 
-                        fa-x-twitter"></i></a>
+
+                    <img src="images/about-image.jpg"
+                        alt="People enjoying coffee at The Untitled Cafe"
+                        class="about-image">
+
+                    <div class="experience-badge">
+                        <strong>5+</strong>
+                        <span>Years of<br>Good Coffee</span>
                     </div>
+
                 </div>
+
+
+                <!-- About Content -->
+                <div class="about-details">
+
+                    <p class="about-tag">Our Story</p>
+
+                    <h2 class="section-title about-title">
+                        A little cafe with a lot of heart.
+                    </h2>
+
+                    <p class="about-text">
+                        The Untitled Cafe was created as a simple place where
+                        people can slow down, enjoy a great cup of coffee,
+                        and spend quality time with friends.
+                    </p>
+
+                    <p class="about-text">
+                        From carefully selected coffee beans to refreshing
+                        drinks and delicious bites, everything is prepared
+                        with care. Whether you're here for a quick coffee
+                        or a long conversation, there's always a seat for you.
+                    </p>
+
+
+                    <!-- Features -->
+                    <div class="about-features">
+
+                        <div class="about-feature">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Fresh Ingredients</span>
+                        </div>
+
+                        <div class="about-feature">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Made With Love</span>
+                        </div>
+
+                        <div class="about-feature">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Free Wi-Fi</span>
+                        </div>
+
+                        <div class="about-feature">
+                            <i class="fa-solid fa-couch"></i>
+                            <span>Cozy Atmosphere</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Social Links -->
+                    <div class="social-link-list">
+
+                        <a href="#" class="social-link"
+                        aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="social-link"
+                        aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="social-link"
+                        aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
 
         <!--menu-->
-        <section class="menu-section">
-            <h2 class="section-title">Our Menu</h2>
-            <div class="section-content">
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <img src="images/hot-beverages.png" alt="" class="menu-image">
-                        <h3 class="name">Hot Beverages</h3>
-                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.7</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="images/cold-beverages.png" alt="" class="menu-image">
-                        <h3 class="name">Cold Beverages</h3>
-                        <p class="text">Creamy and frothy cold coffee to make you cool.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="images/refreshment.png" alt="" class="menu-image">
-                        <h3 class="name">Refreshment</h3>
-                        <p class="text">Fruit and icy refreshing drink to make feel refresh.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="images/special-combo.png" alt="" class="menu-image">
-                        <h3 class="name">Special Combos</h3>
-                        <p class="text">Your favorite eating and drinking combations.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="images/desserts.png" alt="" class="menu-image">
-                        <h3 class="name">Dessert</h3>
-                        <p class="text">Satiate your palate and take you on a culinary treat.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="images/burger-frenchfries - Copy.png" alt="" class="menu-image">
-                        <h3 class="name">Burger & French Fries</h3>
-                        <p class="text">Quick bites to satisfy your small size hunger.</p>
-                    </li>
-                    
-                </ul>
+        
+
+    <section id="menu" class="menu-section">
+
+        <div class="section-heading">
+
+            <p class="section-tag">Taste the difference</p>
+
+            <h2 class="section-title">
+                Featured Dishes
+            </h2>
+
+            <p>
+                A handpicked selection of our cafe's signature favourites.
+            </p>
+
+        </div>
+
+
+        <div class="section-content">
+
+            <!-- Menu Cards (Featured Preview from Django Backend) -->
+            <div class="menu-grid reveal" id="landing-menu-grid">
+                <!-- Dishes loaded dynamically from Django Backend -->
             </div>
-        </section>
+
+            <!-- Show More Dishes Button (Redirects to full menu page) -->
+            <div class="show-more-dishes-wrapper">
+                <a href="menu.html" class="show-more-dishes-btn">
+                    <span>Show More Dishes</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="show-more-hint">Explore our full menu with 20+ handcrafted coffees, drinks, bites & desserts</p>
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= TESTIMONIALS ================= -->
+
+    <section id="testimonials" class="testimonial-section">
+
+        <div class="section-content">
+
+            <!-- Section Heading -->
+
+            <div class="testimonial-heading">
+
+                <p class="testimonial-tag">
+                    Happy Customers
+                </p>
+
+                <h2 class="section-title">
+                    What They Say
+                </h2>
+
+                <p class="testimonial-intro">
+                    Good coffee tastes even better with good company.
+                </p>
+
+            </div>
+
+
+            <!-- Testimonial Slider -->
+
+            <div class="testimonial-slider reveal">
+
+                <!-- Previous Button -->
+
+                <button
+                    class="slider-button prev-button"
+                    id="prev-button"
+                    aria-label="Previous testimonial">
+
+                    <i class="fa-solid fa-chevron-left"></i>
+
+                </button>
+
+
+                <!-- Testimonial Cards -->
+
+                <div class="testimonial-container">
+
+
+                    <!-- Testimonial 1 -->
+
+                    <div class="testimonial-card active">
+
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="testimonial-text">
+                            "The coffee is amazing and the atmosphere
+                            is so peaceful. It is the perfect place
+                            to catch up with friends!"
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="customer-image">
+                                A
+                            </div>
+
+                            <div class="customer-info">
+
+                                <h3>Ananya</h3>
+
+                                <span>
+                                    Regular Customer
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Testimonial 2 -->
+
+                    <div class="testimonial-card">
+
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="testimonial-text">
+                            "Loved the cold coffee and burger combo.
+                            Everything was fresh and the staff were
+                            very friendly."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="customer-image">
+                                R
+                            </div>
+
+                            <div class="customer-info">
+
+                                <h3>Rahul</h3>
+
+                                <span>
+                                    Coffee Lover
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Testimonial 3 -->
+
+                    <div class="testimonial-card">
+
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="testimonial-text">
+                            "A cozy little place with beautiful
+                            presentation and really good desserts.
+                            Definitely coming back!"
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="customer-image">
+                                S
+                            </div>
+
+                            <div class="customer-info">
+
+                                <h3>Shreya</h3>
+
+                                <span>
+                                    Happy Customer
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Next Button -->
+
+                <button
+                    class="slider-button next-button"
+                    id="next-button"
+                    aria-label="Next testimonial">
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Slider Dots -->
+
+            <div class="slider-dots">
+
+                <button
+                    class="slider-dot active"
+                    data-slide="0"
+                    aria-label="Show testimonial 1">
+                </button>
+
+                <button
+                    class="slider-dot"
+                    data-slide="1"
+                    aria-label="Show testimonial 2">
+                </button>
+
+                <button
+                    class="slider-dot"
+                    data-slide="2"
+                    aria-label="Show testimonial 3">
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= GALLERY ================= -->
+
+    <section id="gallery" class="gallery-section">
+
+        <div class="section-content">
+
+            <!-- Gallery Heading -->
+
+            <div class="gallery-heading">
+
+                <p class="gallery-tag">
+                    Inside The Cafe
+                </p>
+
+                <h2 class="section-title">
+                    Our Gallery
+                </h2>
+
+                <p class="gallery-description">
+                    A glimpse of coffee, food and cozy moments.
+                </p>
+
+            </div>
+
+
+            <!-- Gallery -->
+
+            <div class="gallery-grid reveal">
+
+
+                <!-- Image 1 -->
+
+                <div class="gallery-item gallery-large">
+
+                    <img src="images/about-image.jpg"
+                        alt="People enjoying coffee at the cafe">
+
+                    <div class="gallery-overlay">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 2 -->
+
+                <div class="gallery-item">
+
+                    <img src="images/hot-beverages.png"
+                        alt="Hot coffee">
+
+                    <div class="gallery-overlay">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 3 -->
+
+                <div class="gallery-item">
+
+                    <img src="images/cold-beverages.png"
+                        alt="Cold coffee">
+
+                    <div class="gallery-overlay">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 4 -->
+
+                <div class="gallery-item">
+
+                    <img src="images/refreshment.png"
+                        alt="Refreshing drink">
+
+                    <div class="gallery-overlay">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 5 -->
+
+                <div class="gallery-item">
+
+                    <img src="images/desserts.png"
+                        alt="Cafe dessert">
+
+                    <div class="gallery-overlay">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 6 -->
+
+                <div class="gallery-item gallery-wide">
+
+                    <img src="images/burger-frenchfries - Copy.png"
+                        alt="Burger and french fries">
+
+                    <div class="gallery-overlay">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-content">
+
+            <div class="contact-heading">
+                <p class="contact-tag">Get In Touch</p>
+                <h2 class="section-title">Contact Us</h2>
+                <p>
+                    Have a question, suggestion, or just want to say hello?
+                    We'd love to hear from you.
+                </p>
+            </div>
+
+            <div class="contact-content reveal">
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Your Cafe Address<br>Coimbatore, Tamil Nadu</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>yourcafe@email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Monday - Sunday<br>9:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contact-form">
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Subject"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="contact-submit">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                    <p class="form-message" id="form-message"></p>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer class="footer-section">
+
+        <div class="section-content footer-content">
+
+            <!-- Footer Brand -->
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <span class="footer-logo-icon">☕</span>
+                    <span>The Untitled Cafe</span>
+                </a>
+
+                <p>
+                    A cozy place for good coffee, great food,
+                    and unforgettable moments.
+                </p>
+
+                <div class="footer-social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+
+            <!-- Opening Hours -->
+            <div class="footer-column">
+                <h3>Opening Hours</h3>
+
+                <p>Monday - Friday</p>
+                <span>9:00 AM - 10:00 PM</span>
+
+                <p>Saturday - Sunday</p>
+                <span>9:00 AM - 11:00 PM</span>
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column">
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Your Cafe Address
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    yourcafe@email.com
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 The Untitled Cafe. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with <i class="fa-solid fa-heart"></i> for coffee lovers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back To Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     </main>
     <script src="script.js"></script>
 </body>

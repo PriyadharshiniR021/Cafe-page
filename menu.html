@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Menu | The Untitled Cafe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body class="menu-page-body">
+    <!-- Navbar -->
+    <header class="menu-page-header">
+        <nav class="navbar section-content">
+            <a href="index.html#home" class="nav-logo">
+                <h2 class="logo-text">☕ The Untitled Cafe</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link active">Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#gallery" class="nav-link">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
+            <button class="order-button" id="order-button" aria-label="View Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="order-count">0</span>
+            </button>
+
+            <!-- Cart Drawer -->
+            <div class="cart-panel" id="cart-panel">
+                <div class="cart-header">
+                    <h2>Your Order</h2>
+                    <button id="cart-close" class="cart-close" aria-label="Close Cart">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="cart-items" id="cart-items">
+                    <p class="empty-cart">Your cart is empty.</p>
+                </div>
+
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>Total</span>
+                        <strong id="cart-total">₹0</strong>
+                    </div>
+
+                    <button class="place-order-button" id="place-order-button">
+                        Place Order
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Full Menu Hero Banner -->
+        <section class="menu-hero-section">
+            <div class="section-content">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Menu</span>
+                </div>
+
+                <p class="menu-hero-tag">Taste The Difference</p>
+                <h1 class="menu-hero-title">Our Full Menu</h1>
+                <p class="menu-hero-desc">
+                    Explore our complete collection of artisanal coffees, chilled refreshers, mouthwatering gourmet bites, and freshly baked sweet treats.
+                </p>
+
+                <!-- Search & Filters Container -->
+                <div class="menu-controls">
+                    <!-- Live Search Box -->
+                    <div class="search-box-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="menu-search-input" 
+                            class="search-input" 
+                            placeholder="Search your favourite coffee, drinks, dishes or desserts..."
+                            autocomplete="off"
+                        >
+                        <button id="search-clear-btn" class="search-clear-btn" aria-label="Clear search">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="menu-page-filters">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fa-solid fa-utensils"></i>
+                            All Dishes
+                            <span class="badge-count" id="count-all">0</span>
+                        </button>
+
+                        <button class="filter-btn" data-filter="coffee">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Hot Coffee
+                            <span class="badge-count" id="count-coffee">0</span>
+                        </button>
+
+                        <button class="filter-btn" data-filter="drinks">
+                            <i class="fa-solid fa-glass-water"></i>
+                            Cold Beverages
+                            <span class="badge-count" id="count-drinks">0</span>
+                        </button>
+
+                        <button class="filter-btn" data-filter="food">
+                            <i class="fa-solid fa-burger"></i>
+                            Food & Bites
+                            <span class="badge-count" id="count-food">0</span>
+                        </button>
+
+                        <button class="filter-btn" data-filter="dessert">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            Desserts
+                            <span class="badge-count" id="count-dessert">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section Items -->
+        <section class="menu-section" style="padding-top: 20px;">
+            <div class="section-content">
+                <!-- Status Bar -->
+                <div class="menu-results-bar">
+                    <span class="menu-results-count">
+                        Showing <strong id="dish-count">0</strong> items
+                    </span>
+                    <span class="active-category-name" id="active-category-label">All Items</span>
+                </div>
+
+                <!-- Dishes Grid (Loaded dynamically from Django backend) -->
+                <div class="menu-grid" id="full-menu-grid">
+                    <!-- Dynamic menu cards -->
+                </div>
+
+                <!-- No Dishes Found Message (Shown when search/filter has no match) -->
+                <div class="no-dishes-found" id="no-dishes-msg" style="display: none;">
+                    <i class="fa-solid fa-mug-saucer"></i>
+                    <h3>No dishes matched your search</h3>
+                    <p>Try searching for a different dish, or choose another category above.</p>
+                    <button class="reset-search-btn" id="reset-search-btn">View All Dishes</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="section-content footer-content">
+            <!-- Footer Brand -->
+            <div class="footer-brand">
+                <a href="index.html#home" class="footer-logo">
+                    <span class="footer-logo-icon">☕</span>
+                    <span>The Untitled Cafe</span>
+                </a>
+
+                <p>
+                    A cozy place for good coffee, great food,
+                    and unforgettable moments.
+                </p>
+
+                <div class="footer-social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="footer-column">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday</p>
+                <span>9:00 AM - 10:00 PM</span>
+                <p>Saturday - Sunday</p>
+                <span>9:00 AM - 11:00 PM</span>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Your Cafe Address
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 XXXXX XXXXX
+                </p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    yourcafe@email.com
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 The Untitled Cafe. All Rights Reserved.</p>
+            <p>Made with <i class="fa-solid fa-heart"></i> for coffee lovers.</p>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="menu.js"></script>
+</body>
+</html>
